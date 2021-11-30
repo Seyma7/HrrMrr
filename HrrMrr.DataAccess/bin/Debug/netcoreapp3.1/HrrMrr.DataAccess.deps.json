@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "HrrMrr.DataAccess/1.0.0": {
+        "dependencies": {
+          "HrrMrr.Entities": "1.0.0",
+          "HrrMrr.Utilities": "1.0.0"
+        },
+        "runtime": {
+          "HrrMrr.DataAccess.dll": {}
+        }
+      },
+      "HrrMrr.Entities/1.0.0": {
+        "runtime": {
+          "HrrMrr.Entities.dll": {}
+        }
+      },
+      "HrrMrr.Utilities/1.0.0": {
+        "runtime": {
+          "HrrMrr.Utilities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HrrMrr.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HrrMrr.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HrrMrr.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

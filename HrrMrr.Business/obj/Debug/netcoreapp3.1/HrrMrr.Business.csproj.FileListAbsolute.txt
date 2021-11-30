@@ -1,0 +1,16 @@
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\bin\Debug\netcoreapp3.1\HrrMrr.Business.deps.json
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\bin\Debug\netcoreapp3.1\HrrMrr.Business.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\bin\Debug\netcoreapp3.1\HrrMrr.Business.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\bin\Debug\netcoreapp3.1\HrrMrr.DataAccess.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\bin\Debug\netcoreapp3.1\HrrMrr.Entities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\bin\Debug\netcoreapp3.1\HrrMrr.Utilities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\bin\Debug\netcoreapp3.1\HrrMrr.DataAccess.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\bin\Debug\netcoreapp3.1\HrrMrr.Entities.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\bin\Debug\netcoreapp3.1\HrrMrr.Utilities.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\obj\Debug\netcoreapp3.1\HrrMrr.Business.csprojAssemblyReference.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\obj\Debug\netcoreapp3.1\HrrMrr.Business.AssemblyInfoInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\obj\Debug\netcoreapp3.1\HrrMrr.Business.AssemblyInfo.cs
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\obj\Debug\netcoreapp3.1\HrrMrr.Business.csproj.CoreCompileInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\obj\Debug\netcoreapp3.1\HrrMrr.Business.csproj.CopyComplete
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\obj\Debug\netcoreapp3.1\HrrMrr.Business.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Business\obj\Debug\netcoreapp3.1\HrrMrr.Business.pdb

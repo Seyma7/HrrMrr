@@ -1,0 +1,14 @@
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\netcoreapp3.1\HrrMrr.DataAccess.deps.json
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\netcoreapp3.1\HrrMrr.DataAccess.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\netcoreapp3.1\HrrMrr.DataAccess.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\netcoreapp3.1\HrrMrr.Entities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\netcoreapp3.1\HrrMrr.Utilities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\netcoreapp3.1\HrrMrr.Entities.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\netcoreapp3.1\HrrMrr.Utilities.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\netcoreapp3.1\HrrMrr.DataAccess.csprojAssemblyReference.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\netcoreapp3.1\HrrMrr.DataAccess.AssemblyInfoInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\netcoreapp3.1\HrrMrr.DataAccess.AssemblyInfo.cs
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\netcoreapp3.1\HrrMrr.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\netcoreapp3.1\HrrMrr.DataAccess.csproj.CopyComplete
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\netcoreapp3.1\HrrMrr.DataAccess.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\netcoreapp3.1\HrrMrr.DataAccess.pdb

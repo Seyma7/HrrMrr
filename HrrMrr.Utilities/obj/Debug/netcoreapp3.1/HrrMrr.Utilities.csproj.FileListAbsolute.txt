@@ -1,0 +1,9 @@
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Utilities\bin\Debug\netcoreapp3.1\HrrMrr.Utilities.deps.json
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Utilities\bin\Debug\netcoreapp3.1\HrrMrr.Utilities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Utilities\bin\Debug\netcoreapp3.1\HrrMrr.Utilities.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Utilities\obj\Debug\netcoreapp3.1\HrrMrr.Utilities.csprojAssemblyReference.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Utilities\obj\Debug\netcoreapp3.1\HrrMrr.Utilities.AssemblyInfoInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Utilities\obj\Debug\netcoreapp3.1\HrrMrr.Utilities.AssemblyInfo.cs
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Utilities\obj\Debug\netcoreapp3.1\HrrMrr.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Utilities\obj\Debug\netcoreapp3.1\HrrMrr.Utilities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Utilities\obj\Debug\netcoreapp3.1\HrrMrr.Utilities.pdb
