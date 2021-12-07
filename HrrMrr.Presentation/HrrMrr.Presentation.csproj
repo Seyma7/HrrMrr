@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="5.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.4" />
@@ -18,6 +19,23 @@
     <ProjectReference Include="..\HrrMrr.Business\HrrMrr.Business.csproj" />
     <ProjectReference Include="..\HrrMrr.Entities\HrrMrr.Entities.csproj" />
     <ProjectReference Include="..\HrrMrr.Utilities\HrrMrr.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\dist\node_modules\bootstrap\scss\mixins\_caret.scss" />
+    <None Include="wwwroot\dist\node_modules\bootstrap\scss\mixins\_navbar.scss" />
+    <None Include="wwwroot\dist\node_modules\bootstrap\scss\_dropdown.scss" />
+    <None Include="wwwroot\dist\node_modules\bootstrap\scss\_main-header.scss" />
+    <None Include="wwwroot\dist\node_modules\bootstrap\scss\_nav.scss" />
+    <None Include="wwwroot\dist\node_modules\bootstrap\scss\_navbar.scss" />
+    <None Include="wwwroot\dist\node_modules\bootstrap\scss\_reboot.scss" />
+    <None Include="wwwroot\dist\node_modules\bootstrap\scss\_root.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Resources\Views\" />
   </ItemGroup>
 
 </Project>
