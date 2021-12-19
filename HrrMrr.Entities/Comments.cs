@@ -17,15 +17,20 @@ namespace HrrMrr.Entities
 
         public DateTime Date { get; set; }
 
+
+
         [Required]
         public int UserId { get; set; }
 
         [Required]
-        public int PetAdvertId { get; set; }
-
-        [Required]
         [ForeignKey("UserId")]
         public virtual Users User { get; set; }
+
+
+
+
+        [Required]
+        public int PetAdvertId { get; set; }
 
         [Required]
         [ForeignKey("PetAdvertId")]

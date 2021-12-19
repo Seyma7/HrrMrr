@@ -15,7 +15,8 @@ namespace HrrMrr.DataAccess
         public DbSet<PetTypes> PetTypes { get; set; }
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Users> Users { get; set; }
-
+        public DbSet<Cities> Cities { get; set; }
+        public DbSet<Distrincts> Distrincts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

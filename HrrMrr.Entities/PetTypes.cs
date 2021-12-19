@@ -14,5 +14,7 @@ namespace HrrMrr.Entities
 
         [Required(ErrorMessage = "Evcil hayvanın türü alanı boş geçilemez.")]
         public string TypeName { get; set; }
+
+        public virtual List<PetAdverts> PetAdverts { get; set; }
     }
 }

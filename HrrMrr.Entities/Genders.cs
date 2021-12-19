@@ -14,5 +14,9 @@ namespace HrrMrr.Entities
 
         [Required(ErrorMessage = "Cinsiyet alanı boş geçilemez.")]
         public string GenderName { get; set; }
+
+        public virtual List<PetAdverts> PetAdverts { get; set; }
+
+        public virtual List<Users> Users { get; set; }
     }
 }

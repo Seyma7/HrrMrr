@@ -26,37 +26,48 @@ namespace HrrMrr.Entities
 
         public DateTime Date { get; set; }
 
-        [Required]
-        public int ImageId { get; set; }
+
 
         [Required]
         public int GenderId { get; set; }
 
         [Required]
-        public int PetTypeId { get; set; }
-
-        [Required]
-        public int LocationId { get; set; }
-
-        [Required]
-        public int UserId { get; set; }
-
-        public virtual List<Images> Images { get; set; }
-
-        [Required]
         [ForeignKey("GenderId")]
         public virtual Genders Gender { get; set; }
+
+
+
+        [Required]
+        public int PetTypeId { get; set; }
+
 
         [Required]
         [ForeignKey("PetTypeId")]
         public virtual PetTypes PetType { get; set; }
 
+
+
+
+        [Required]
+        public int LocationId { get; set; }
+
         [Required]
         [ForeignKey("LocationId")]
         public virtual Locations Location { get; set; }
 
+
+
+
+        [Required]
+        public int UserId { get; set; }
+
         [Required]
         [ForeignKey("UserId")]
         public virtual Users User { get; set; }
+
+
+
+        public virtual List<Images> Images { get; set; }
+
     }
 }

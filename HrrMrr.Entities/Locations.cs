@@ -15,12 +15,6 @@ namespace HrrMrr.Entities
         [Required(ErrorMessage = "Ülke alanı boş geçilemez.")]
         public string Country { get; set; }
 
-        [Required(ErrorMessage = "Şehir alanı boş geçilemez.")]
-        public string City { get; set; }
-
-        [Required(ErrorMessage = "İlçe alanı boş geçilemez.")]
-        public string District { get; set; }
-
         [Required(ErrorMessage = "Mahalle alanı boş geçilemez.")]
         public string Neighbourhood { get; set; }
 
@@ -35,5 +29,19 @@ namespace HrrMrr.Entities
 
         [Required(ErrorMessage = "Adres açıklama alanı boş geçilemez.")]
         public string Description { get; set; }
+
+        [Required(ErrorMessage = "Şehir alanı boş geçilemez.")]
+        public string CityId { get; set; }
+
+        [Required(ErrorMessage = "İlçe alanı boş geçilemez.")]
+        public string DistrinctId { get; set; }
+
+        [Required]
+        [ForeignKey("DistrinctId")]
+        public virtual Distrincts Distrinct { get; set; }
+
+        [Required]
+        [ForeignKey("CityId")]
+        public virtual Cities City { get; set; }
     }
 }

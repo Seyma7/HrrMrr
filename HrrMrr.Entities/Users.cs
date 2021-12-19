@@ -31,29 +31,37 @@ namespace HrrMrr.Entities
         [Required(ErrorMessage = "Açıklama alanı boş geçilemez.")]
         public string Description { get; set; }
 
+
+
         [Required]
         public int ImageId { get; set; }
-
-        [Required]
-        public int GenderId { get; set; }
-
-        [Required]
-        public int RoleId { get; set; }
-
-        [Required]
-        public int LocationId { get; set; }
 
         [Required]
         [ForeignKey("ImageId")]
         public virtual Images Image { get; set; }
 
+
+
+        [Required]
+        public int GenderId { get; set; }
+
         [Required]
         [ForeignKey("GenderId")]
         public virtual Genders Gender { get; set; }
 
+
+
+        [Required]
+        public int RoleId { get; set; }
+
         [Required]
         [ForeignKey("RoleId")]
         public virtual Roles Role { get; set; }
+
+
+
+        [Required]
+        public int LocationId { get; set; }
 
         [Required]
         [ForeignKey("LocationId")]

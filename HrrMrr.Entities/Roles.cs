@@ -14,5 +14,7 @@ namespace HrrMrr.Entities
 
         [Required(ErrorMessage = "Üyelik türü boş geçilemez.")]
         public string RoleName { get; set; }
+
+        public virtual List<Users> Users { get; set; }
     }
 }
