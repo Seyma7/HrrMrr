@@ -1,0 +1,17 @@
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\net5.0\HrrMrr.Entities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\net5.0\HrrMrr.Utilities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\net5.0\HrrMrr.Utilities.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\net5.0\HrrMrr.DataAccess.csprojAssemblyReference.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\net5.0\HrrMrr.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\net5.0\HrrMrr.DataAccess.AssemblyInfoInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\net5.0\HrrMrr.DataAccess.AssemblyInfo.cs
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\net5.0\HrrMrr.DataAccess.deps.json
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\net5.0\HrrMrr.DataAccess.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\net5.0\ref\HrrMrr.DataAccess.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\net5.0\HrrMrr.DataAccess.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\bin\Debug\net5.0\HrrMrr.Entities.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\net5.0\HrrMrr.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\net5.0\HrrMrr.DataAccess.csproj.CopyComplete
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\net5.0\HrrMrr.DataAccess.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\net5.0\ref\HrrMrr.DataAccess.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.DataAccess\obj\Debug\net5.0\HrrMrr.DataAccess.pdb

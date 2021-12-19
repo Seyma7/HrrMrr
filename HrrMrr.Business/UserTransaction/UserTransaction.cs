@@ -4,7 +4,8 @@ using System.Text;
 
 namespace HrrMrr.Business.UserTransaction
 {
-    class UserTransaction
+    public class UserTransaction
     {
+
     }
 }

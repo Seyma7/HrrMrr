@@ -1,0 +1,12 @@
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\bin\Debug\net5.0\HrrMrr.Entities.deps.json
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\bin\Debug\net5.0\HrrMrr.Entities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\bin\Debug\net5.0\ref\HrrMrr.Entities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\bin\Debug\net5.0\HrrMrr.Entities.pdb
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\obj\Debug\net5.0\HrrMrr.Entities.csprojAssemblyReference.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\obj\Debug\net5.0\HrrMrr.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\obj\Debug\net5.0\HrrMrr.Entities.AssemblyInfoInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\obj\Debug\net5.0\HrrMrr.Entities.AssemblyInfo.cs
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\obj\Debug\net5.0\HrrMrr.Entities.csproj.CoreCompileInputs.cache
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\obj\Debug\net5.0\HrrMrr.Entities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\obj\Debug\net5.0\ref\HrrMrr.Entities.dll
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Entities\obj\Debug\net5.0\HrrMrr.Entities.pdb

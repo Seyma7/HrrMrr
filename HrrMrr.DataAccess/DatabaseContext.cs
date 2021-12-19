@@ -22,5 +22,6 @@ namespace HrrMrr.DataAccess
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer(connectionString: GlobalSettings.ConnectionString);
         }
-    }
+
+}
 }

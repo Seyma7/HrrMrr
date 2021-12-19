@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HrrMrr.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +7,7 @@ namespace HrrMrr.DataAccess.Manager
 {
     public class UserManager
     {
-        public Users AddUser(User user, string password)
+        public Users Register(Users user, string password)
         {
             using (var db = new DatabaseContext())
             {
