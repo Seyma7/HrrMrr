@@ -17,6 +17,5 @@ namespace HrrMrr.Entities
 
         public virtual List<PetAdverts> PetAdverts { get; set; }
 
-        public virtual List<Users> Users { get; set; }
     }
 }

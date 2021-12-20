@@ -49,13 +49,7 @@ namespace HrrMrr.Entities
 
 
         [Required]
-        public int LocationId { get; set; }
-
-        [Required]
-        [ForeignKey("LocationId")]
-        public virtual Locations Location { get; set; }
-
-
+        public string Location { get; set; }
 
 
         [Required]

@@ -24,31 +24,13 @@ namespace HrrMrr.Entities
         [Required(ErrorMessage = "Mail adresi alanı boş geçilemez.")]
         public string Mail { get; set; }
 
-        public int Age { get; set; }
+        [Required(ErrorMessage = "Ad alanı boş geçilemez.")]
+        public string Password { get; set; }
 
         public string Website { get; set; }
 
         [Required(ErrorMessage = "Açıklama alanı boş geçilemez.")]
         public string Description { get; set; }
-
-
-
-        [Required]
-        public int ImageId { get; set; }
-
-        [Required]
-        [ForeignKey("ImageId")]
-        public virtual Images Image { get; set; }
-
-
-
-        [Required]
-        public int GenderId { get; set; }
-
-        [Required]
-        [ForeignKey("GenderId")]
-        public virtual Genders Gender { get; set; }
-
 
 
         [Required]
@@ -59,13 +41,8 @@ namespace HrrMrr.Entities
         public virtual Roles Role { get; set; }
 
 
-
         [Required]
-        public int LocationId { get; set; }
-
-        [Required]
-        [ForeignKey("LocationId")]
-        public virtual Locations Location { get; set; }
+        public string Location { get; set; }
 
     }
 }

@@ -57,8 +57,13 @@
 
                 <!-- Right navbar links -->
                 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-                    <li class="nav-item">
-                        <a href="@Url.Action("Register","User")" class="nav-link">Kaydol</a>
+                    <li class="nav-item dropdown">
+                        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Üye Ol</a>
+                        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                            <li><a href="@Url.Action("RegisterCompany","User")" class="dropdown-item">Kurumsal Üyelik </a></li>
+                            <li><a href="#" class="dropdown-item">Üyelik</a></li>
+                            <li><a href="#" class="dropdown-item">Admin</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Giriş Yap</a>

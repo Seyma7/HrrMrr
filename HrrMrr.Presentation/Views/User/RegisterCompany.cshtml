@@ -9,7 +9,7 @@
             <h1>Kaydol</h1>
             <div class="row">
                 <div class="col-md-4">
-                    <form id="registerForm" method="post" action="@Url.Action("Register","User")">
+                    <form id="registerForm" method="post" action="@Url.Action("RegisterCompany","User")">
                         <h4>Yeni hesap oluştur.</h4>
                         <hr />
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group">
                             <label>Website</label>
-                            <input asp-for="Website" class="form-control" />
+                            <input asp-for="Website" type="url" class="form-control" />
                             <span asp-validation-for="Website" class="text-danger"></span>
                         </div>
                         <div class="form-group">
@@ -38,16 +38,23 @@
                             <input asp-for="Description" class="form-control" />
                             <span asp-validation-for="Description" class="text-danger"></span>
                         </div>
-                      
                         @*<div class="form-group">
-                            <label asp-for="RoleId" class="control-label"></label>
-                            <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
-                        </div>*@
-                    <div class="form-group">
-                        <label>Adres</label>
-                        <input asp-for="Location" class="form-control" />
-                        <span asp-validation-for="Location" class="text-danger"></span>
-                    </div>
+            <label asp-for="ImageId" class="control-label"></label>
+            <select asp-for="ImageId" class="form-control" asp-items="ViewBag.ImageId"></select>
+        </div>*@
+                        @*<div class="form-group">
+            <label asp-for="GenderId" class="control-label"></label>
+            <select asp-for="GenderId" class="form-control" asp-items="ViewBag.GenderId"></select>
+        </div>*@
+                        @*<div class="form-group">
+            <label asp-for="RoleId" class="control-label"></label>
+            <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+        </div>*@
+                        <div class="form-group">
+                            <label>Adres</label>
+                            <input asp-for="Location" class="form-control" />
+                            <span asp-validation-for="Location" class="text-danger"></span>
+                        </div>
                         <div class="form-group">
                             <label>Mail</label>
                             <input class="form-control" autocomplete="Mail" type="email" data-val="true" data-val-email="Geçerli mail adresi giriniz." data-val-required="Mail alanı boş geçilemez." id="Mail" name="Mail" value="" />
@@ -55,16 +62,26 @@
                         </div>
                         <div class="form-group">
                             <label>Parola</label>
-                            <input class="form-control" autocomplete="new-password" type="password" data-val="true" data-val-length="The Password must be at least 6 and at max 100 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Input_Password" maxlength="100" name="Input.Password" />
-                            <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+                            <input class="form-control" autocomplete="new-password" type="password" data-val="true" data-val-length="The Password must be at least 6 and at max 100 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Password" maxlength="100" name="Password" />
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
                         </div>
                         <div class="form-group">
                             <label>Parola Doğrulama</label>
                             <input class="form-control" autocomplete="new-password" type="password" data-val="true" data-val-equalto="Parolalar eşleşmiyor." data-val-equalto-other="*.Password" id="Input_ConfirmPassword" name="Input.ConfirmPassword" />
                             <span class="text-danger field-validation-valid" data-valmsg-for="Input.ConfirmPassword" data-valmsg-replace="true"></span>
                         </div>
-                        <button id="registerSubmit" type="submit" class="btn btn-primary">Kaydol</button>
-                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Dm3hzEXiflKhQBe4-syIvteAOJnrvPqqw24hA5m2gjjZ8EzyPt05aT_P_YkzG5gIRaIz8Ydakay66E8RSy5JApnj0T8HymYzSvPPcS1lzByUR3OlwnwdC-ibY46-TriHq43ZQK5jwSD87m0yosEpgY" />
+                        <button type="submit" action="@Url.Action("RegisterCompany","User")" class="btn btn-primary">Kaydol</button>
+                        <br />
+                        @if (ViewBag.hataMesaji != null)
+                        {
+                            <div class="alert alert-@ViewBag.turu alert-dismissible fade show" role="alert">
+                                @ViewBag.hataMesaji
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        }
+
                         <br /><br /><br />
                     </form>
                 </div>
