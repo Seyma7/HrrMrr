@@ -1,4 +1,5 @@
 ﻿using HrrMrr.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,6 +64,15 @@ namespace HrrMrr.DataAccess.Manager
             {
                 Users user = new Users();
                 user = db.Users.FirstOrDefault(x => x.Mail == mail && x.Password == md.getEnc(password));
+                return user;
+            }
+        }
+
+        public Users MyAccount(int userid)
+        {
+            using (var db = new DatabaseContext())
+            {
+                var user = db.Users.Where(x => x.UserId == userid).FirstOrDefault();
                 return user;
             }
         }

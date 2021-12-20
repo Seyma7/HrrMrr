@@ -179,3 +179,4 @@ C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\Razor\View
 C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\Razor\Views\User\Register.cshtml.g.cs
 C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\Razor\Views\User\RegisterCompany.cshtml.g.cs
 C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\Razor\Views\User\RegisterUser.cshtml.g.cs
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\Razor\Views\User\MyAccount.cshtml.g.cs

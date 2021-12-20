@@ -99,5 +99,18 @@ namespace HrrMrr.Presentation.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpGet]
+        public IActionResult MyAccount(int userid)
+        {
+            ViewBag.kullaniciGiris = null;
+
+            if (Request.Cookies["kullaniciId"] != null)
+            {
+                userid = Convert.ToInt32(Request.Cookies["kullaniciId"]);
+            }
+
+            return View(transaction.MyAccount(userid));
+        }
     }
 }

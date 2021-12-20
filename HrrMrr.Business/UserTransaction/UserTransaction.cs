@@ -69,5 +69,10 @@ namespace HrrMrr.Business.UserTransaction
         {
             return manager.User(mail, password);
         }
+
+        public Users MyAccount(int userid)
+        {
+            return manager.MyAccount(userid);
+        }
     }
 }

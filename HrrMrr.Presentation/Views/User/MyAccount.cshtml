@@ -1,0 +1,32 @@
+﻿@model HrrMrr.Entities.Users
+
+@{
+    ViewBag.title = "Hesabım";
+    Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+}
+
+    <main class="main-content">
+
+        <div class="container h-100">
+
+            <div class="card-body box-profile">
+
+
+                <h3 class="profile-username text-center">@Model.Name @Model.Surname</h3>
+
+                <ul class="list-group list-group-unbordered mb-3">
+                    <li class="list-group-item">
+                        <b>Mail</b> <a class="float-right">@Model.Mail</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Telefon Numarası</b> <a class="float-right">@Model.PhoneNumber</a>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Website</b> <a class="float-right">@Model.Website</a>
+                    </li>
+                </ul>
+
+                <a href="@Url.Action("UpdateUser","User",new { userid=ViewBag.kullaniciId})" class="btn btn-primary btn-block"><b>Güncelle</b></a>
+            </div>
+        </div>
+    </main>

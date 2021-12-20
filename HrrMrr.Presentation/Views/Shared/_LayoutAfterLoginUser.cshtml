@@ -58,12 +58,21 @@
                 <!-- Right navbar links -->
                 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
                     <li class="nav-item dropdown">
+                        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">İlanlar</a>
+                        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                            <li><a href="#" class="dropdown-item">İlanlar</a></li>
+                            <li><a href="#" class="dropdown-item">İlanlarım</a></li>
+                            <li><a href="#" class="dropdown-item">İlan Aç</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
                         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Hesap</a>
                         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                            <li><a href="#" class="dropdown-item">Hesabım </a></li>
+                            <li><a href="@Url.Action("MyAccount","User")" class="dropdown-item">Hesabım </a></li>
                             <li><a href="@Url.Action("Logout","User")" class="dropdown-item">Çıkış Yap</a></li>
                         </ul>
                     </li>
+
                     <li class="navbar_buttons"><a class="btn btn-danger btn-md btn-round btn-glass mr-2"> <partial name="_Culture" /> </a></li>
                 </ul>
             </div>
