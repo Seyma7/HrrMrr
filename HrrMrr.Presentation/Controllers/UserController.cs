@@ -1,5 +1,6 @@
 ﻿using HrrMrr.Business.UserTransaction;
 using HrrMrr.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,7 @@ namespace HrrMrr.Presentation.Controllers
     public class UserController : Controller
     {
         UserTransaction transaction = new UserTransaction();
-        public IActionResult Login()
-        {
-            return View();
-        }
-
+       
         [HttpGet]
         public IActionResult RegisterCompany()
         {
@@ -58,6 +55,49 @@ namespace HrrMrr.Presentation.Controllers
                 ViewBag.turu = deneme.Message[1];
                 return View();
             }
+        }
+
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            var model = new Users();
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult Login(Users model)
+        {
+            var deneme = transaction.UserInformationControl(model.Mail, model.Password);
+            if (deneme.IsSuccess == true)
+            {
+                Users user = transaction.User(model.Mail, model.Password);
+                CookieOptions cookies = new CookieOptions();
+                cookies.Expires = DateTime.Now.AddDays(21);
+                Response.Cookies.Append("kullaniciAdi",user.Name+user.Surname);
+                int denemeInt = user.UserId;
+                Response.Cookies.Append("roleId", user.RoleId.ToString());
+                Response.Cookies.Append("kullaniciId", denemeInt.ToString());
+                return RedirectToAction("Index", "Home");
+                
+            }
+            else
+            {
+                ViewBag.hataMesaji = deneme.Message[0];
+                ViewBag.turu = deneme.Message[1];
+                return View();
+            }
+        }
+
+        public async Task<IActionResult> LogOut()
+        {
+            ViewBag.kullaniciGiris = null;
+            if (Request.Cookies["kullaniciAdi"] != null)
+            {
+                Response.Cookies.Delete("kullaniciAdi");
+                Response.Cookies.Delete("kullaniciId");
+                Response.Cookies.Delete("roleId");
+            }
+            return RedirectToAction("Index", "Home");
         }
     }
 }

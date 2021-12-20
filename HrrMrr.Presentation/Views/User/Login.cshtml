@@ -1,5 +1,7 @@
-﻿@{
+﻿@model HrrMrr.Entities.Users
+@{
     ViewData["Title"] = "Login";
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -17,12 +19,12 @@
 
                                 <div class="form-group">
                                     <label for="Input_Email">Email</label>
-                                    <input class="form-control" autocomplete="username" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Input_Email" name="Input.Email" value="" />
+                                    <input class="form-control" autocomplete="mail" type="email" data-val="true" data-val-email="Mail alanı boş bırakılamaz." data-val-required="Mail alanı boş bırakılamaz." id="Mail" name="Mail" value="" />
                                     <span class="text-danger field-validation-valid" data-valmsg-for="Input.Email" data-valmsg-replace="true"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="Input_Password">Parola</label>
-                                    <input class="form-control" autocomplete="current-password" type="password" data-val="true" data-val-required="The Password field is required." id="Input_Password" name="Input.Password" />
+                                    <input class="form-control" autocomplete="current-password" type="password" data-val="true" data-val-required="Parola alanı boş bırakılamaz." id="Password" name="Password" />
                                     <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
                                 </div>
                                 <div class="form-group">
@@ -34,7 +36,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button id="login-submit" type="submit" class="btn btn-primary">Log in</button>
+                                    <button id="login-submit" action="@Url.Action("Login","User")" type="submit" class="btn btn-primary">Giriş Yap</button>
                                 </div>
                                 <div class="form-group">
                                     <p>
@@ -58,7 +60,7 @@
                             <div>
                                 <p>
                                     Bilgilerinize erişim için lütfen giriş yapınız.
-                                    </a>.
+                                   
                                 </p>
                             </div>
                         </section>

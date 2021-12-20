@@ -1,16 +1,25 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "HrrMrr | Anasayfa";
+    if (ViewBag.kullaniciGiris != null)
+    {
+        Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
 }
 
 <!-- Main content -->
 <div class="content">
     @*<section class="section text-white h-fullscreen text-center" style="background-image: url(../../wwwroot/images/kedi6.jpg);">
-    
-        <div class="overlay opacity-70" style="background-color: #000;"></div>
 
-        
+            <div class="overlay opacity-70" style="background-color: #000;"></div>
 
-    </section>*@
+
+
+        </section>*@
     <section class="section text-white h-fullscreen text-center">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -44,7 +53,7 @@
     </section>
     <br /><br /><br />
     <div class="container">
-        
+
         <div class="row">
             <div class="col-lg-6">
                 <div class="card">

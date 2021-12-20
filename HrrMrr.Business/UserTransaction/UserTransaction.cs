@@ -1,9 +1,5 @@
 ﻿using HrrMrr.DataAccess.Manager;
 using HrrMrr.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Utilities;
 using Utilities.BusinessResult;
 
 namespace HrrMrr.Business.UserTransaction
@@ -52,6 +48,26 @@ namespace HrrMrr.Business.UserTransaction
             manager.RegisterUser(user, password);
             result.IsSuccess = true;
             return result;
+        }
+
+        public DataResult<object> UserInformationControl(string mail, string password)
+        {
+            var result = new DataResult<object>();
+
+            if (manager.UserInformationControl(mail, password) == null)
+            {
+                result.Message.Add("Kullanıcı bilgileriniz hatalıdır.");
+                result.Message.Add("danger");
+                return result;
+            }
+            result.IsSuccess = true;
+            return result;
+        }
+
+        //Kulanıcı adı ve şifre kontrolü
+        public Users User(string mail, string password)
+        {
+            return manager.User(mail, password);
         }
     }
 }

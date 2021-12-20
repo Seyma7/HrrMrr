@@ -20,6 +20,14 @@ namespace HrrMrr.Presentation.Controllers
 
         public IActionResult Index()
         {
+            if (Request.Cookies["kullaniciAdi"] == null)
+            {
+                ViewBag.kullaniciGiris = null;
+
+            }
+            else
+                ViewBag.kullaniciGiris = Request.Cookies["kullaniciAdi"];
+
             return View();
         }
 
