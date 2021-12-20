@@ -24,7 +24,7 @@ namespace HrrMrr.Entities
         [Required(ErrorMessage = "Mail adresi alanı boş geçilemez.")]
         public string Mail { get; set; }
 
-        [Required(ErrorMessage = "Ad alanı boş geçilemez.")]
+        [Required(ErrorMessage = "Password alanı boş geçilemez.")]
         public string Password { get; set; }
 
         public string Website { get; set; }

@@ -22,9 +22,31 @@ namespace HrrMrr.Presentation.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult RegisterCompany(Users user, string password)
+        public IActionResult RegisterCompany(Users user, string password,string password2)
         {
-            var deneme = transaction.Register(user, password);
+            var deneme = transaction.Register(user, password,password2);
+
+            if (deneme.IsSuccess == true)
+            {
+                return RedirectToAction("Login", "User");
+            }
+            else
+            {
+                ViewBag.hataMesaji = deneme.Message[0];
+                ViewBag.turu = deneme.Message[1];
+                return View();
+            }
+        }
+
+        [HttpGet]
+        public IActionResult RegisterUser()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult RegisterUser(Users user, string password, string password2)
+        {
+            var deneme = transaction.Register(user, password, password2);
 
             if (deneme.IsSuccess == true)
             {

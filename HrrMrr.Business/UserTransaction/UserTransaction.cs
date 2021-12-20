@@ -12,7 +12,7 @@ namespace HrrMrr.Business.UserTransaction
     {
         UserManager manager = new UserManager();
 
-        public DataResult<object> Register(Users user, string password)
+        public DataResult<object> Register(Users user, string password,string password2)
         {
             var result = new DataResult<object>();
 
@@ -23,12 +23,6 @@ namespace HrrMrr.Business.UserTransaction
                 return result;
             }
 
-            if (user.Name == null)
-            {
-                result.Message.Add("Ad alanı zorunludur.");
-                result.Message.Add("danger");
-                return result;
-            }
             if (user.Surname == null)
             {
                 result.Message.Add("Soyad alanı zorunludur.");
@@ -41,32 +35,21 @@ namespace HrrMrr.Business.UserTransaction
                 result.Message.Add("danger");
                 return result;
             }
-
-
-            if (!RegexValidator.IsValidEmail(user.Mail))
+            if (password!=password2)
             {
-                result.Message.Add("Lütfen geçerli bir mail adresi giriniz.");
-                result.Message.Add("danger");
-                return result;
-
-            }
-
-            if (!RegexValidator.IsValidPassword(password))
-            {
-                result.Message.Add("Şifre, en az sekiz en fazla 10 karakter, en az bir büyük harf, bir küçük harf, bir sayı ve bir özel karakter(@$!%*?&.) içermelidir.");
+                result.Message.Add("Parolalar eşleşmiyor.");
                 result.Message.Add("danger");
                 return result;
             }
 
+            if (manager.UserControl(user.Mail) != null)
+            {
+                result.Message.Add("Bu bilgilerle kaydolmuş bir kullanıcımız mevcut.");
+                result.Message.Add("danger");
+                return result;
+            }
 
-            //if (manager.UserControl(user.Mail) != null)
-            //{
-            //    result.Message.Add("Bu bilgilerle kaydolmuş bir kullanıcımız mevcut.");
-            //    result.Message.Add("danger");
-            //    return result;
-            //}
-
-            manager.RegisterCompany(user, password);
+            manager.RegisterUser(user, password);
             result.IsSuccess = true;
             return result;
         }

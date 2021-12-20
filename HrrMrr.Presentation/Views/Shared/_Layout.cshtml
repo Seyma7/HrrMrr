@@ -61,16 +61,11 @@
                         <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Üye Ol</a>
                         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
                             <li><a href="@Url.Action("RegisterCompany","User")" class="dropdown-item">Kurumsal Üyelik </a></li>
-                            <li><a href="#" class="dropdown-item">Üyelik</a></li>
-                            <li><a href="#" class="dropdown-item">Admin</a></li>
+                            <li><a href="@Url.Action("RegisterUser","User")" class="dropdown-item">Üyelik</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Giriş Yap</a>
-                        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                            <li><a href="@Url.Action("Login","User")" class="dropdown-item">Kurumsal Giriş </a></li>
-                            <li><a href="#" class="dropdown-item">Üye Girişi</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a href=@Url.Action("Login","User") class="nav-link">Giriş Yap</a>
                     </li>
                     <li class="navbar_buttons"><a class="btn btn-danger btn-md btn-round btn-glass mr-2"> <partial name="_Culture" /> </a></li>
                 </ul>

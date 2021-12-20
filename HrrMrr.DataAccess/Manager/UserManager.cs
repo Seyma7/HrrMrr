@@ -23,16 +23,27 @@ namespace HrrMrr.DataAccess.Manager
             return user;
         }
 
+        public Users RegisterUser(Users user, string password)
+        {
+            using (var db = new DatabaseContext())
+            {
+                user.RoleId = 2;
+                user.Password = md.getEnc(password);
 
+                db.Users.Add(user);
+                db.SaveChanges();
+            }
+            return user;
+        }
 
-        //public Users UserControl(string mail)
-        //{
-        //    using (var db = new DatabaseContext())
-        //    {
-        //        Users user = new Users();
-        //        user = db.Users.FirstOrDefault(x => x.Mail == mail );
-        //        return user;
-        //    }
-        //}
+        public Users UserControl(string mail)
+        {
+            using (var db = new DatabaseContext())
+            {
+                Users user = new Users();
+                user = db.Users.FirstOrDefault(x => x.Mail == mail);
+                return user;
+            }
+        }
     }
 }
