@@ -7,8 +7,6 @@ namespace HrrMrr.DataAccess
     public class DatabaseContext:DbContext
     {
         public DbSet<Comments> Comments { get; set; }
-        public DbSet<Genders> Genders { get; set; }
-        public DbSet<Genuses> Genuses { get; set; }
         public DbSet<Images> Images { get; set; }
         public DbSet<PetAdverts> PetAdverts { get; set; }
         public DbSet<PetTypes> PetTypes { get; set; }

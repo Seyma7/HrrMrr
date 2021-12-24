@@ -1,0 +1,74 @@
+﻿@model HrrMrr.Entities.PetAdverts
+
+@{
+    ViewData["Title"] = "AddPetAdvert";
+    Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+}
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="AddPetAdvert" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Month" class="control-label"></label>
+                        <input asp-for="Month" class="form-control" />
+                        <span asp-validation-for="Month" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Weight" class="control-label"></label>
+                        <input asp-for="Weight" class="form-control" />
+                        <span asp-validation-for="Weight" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Story" class="control-label"></label>
+                        <input asp-for="Story" class="form-control" />
+                        <span asp-validation-for="Story" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Gender" class="control-label"></label>
+                        <input asp-for="Gender" class="form-control" />
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PetType" class="control-label"></label>
+                        @*<input asp-for="PetType" class="form-control" />*@
+                        <select class="float-right" name="PetTypeId">
+                            @foreach (var item in ViewBag.petTypes)
+                            {
+                                <option value="@item.PetTypeId">@item.TypeName</option>
+                            }
+                        </select>
+                        <span asp-validation-for="PetType" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Location" class="control-label"></label>
+                        <input asp-for="Location" class="form-control" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+            <label asp-for="ImageId" class="control-label"></label>
+            <select asp-for="ImageId" class="form-control" asp-items="ViewBag.ImageId"></select>
+        </div>*@
+                    <div class="form-group">
+                        <input type="submit" href="@Url.Action("AddPetAdvert","PetAdvert")" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <br /><br /><br /><br />
+    </div>
+</div>
+
+

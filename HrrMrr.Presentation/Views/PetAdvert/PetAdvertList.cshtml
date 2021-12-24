@@ -1,0 +1,101 @@
+﻿@model IEnumerable<HrrMrr.Entities.PetAdverts>
+@{
+    ViewBag.title = "İlanlar";
+    @if (ViewBag.kullaniciGiris != null)
+    {
+        Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<style>
+    .container-sm {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        width: auto;
+    }
+</style>
+<header class="header text-white text-center" style="background-color: #b9a0c9; background-image: linear-gradient(to bottom, #003B55 0%, #0095D4 100%);">
+    <div class="container">
+        <h1>İlanlar</h1>
+        <p class="lead-2 opacity-90 mt-6"></p>
+    </div>
+</header>
+<!-- Main Content -->
+<main class="main-content">
+    <section class="section p-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-xl-6 mx-auto">
+                    @foreach (var item in Model.ToList())
+                    {
+                        <article class="my-8">
+                            <header class="text-center mb-7">
+                                <p>
+                                    <a class="small-4 text-lighter text-uppercase ls-2 fw-600">@item.</a>
+                                </p>
+                                <h3><a href="">@item.PetType</a></h3>
+                            </header>
+                            <div class="card-body">
+                                <div class="row mb-5 small-2 text-lighter">
+                                    <div class="col-auto">
+                                        <span>by @item.User.Name @item.User.Surname</span>
+                                        <span class="align-middle px-1">&bull;@item.Date</span>
+                                    </div>
+                                    @*<div class="col-auto ml-auto">
+                <a class="text-inherit ml-5">
+                    <i class="fa fa-comments pr-1 opacity-60">@item.Comments.Count</i>
+
+                </a>
+            </div>*@
+                                </div>
+
+                                @*//resim varsa*@
+                                @if (item.Image != null)
+                                {
+                                    if (item.Story.Length < 300)
+                                    {
+                                        <p>@item.Image</p>
+                                        <p>@Html.Raw(item.Story)</p>
+                                    }
+                                    else
+                                    {
+                                        <p>@item.Image</p>
+                                        <p>@Html.Raw(item.Story.Substring(0, 300))</p>
+                                    }
+                                }
+                                else
+                                {
+                                    if (item.Story.Length < 300)
+                                    {
+                                        <p>@Html.Raw(item.Story)</p>
+                                    }
+                                    else
+                                    {
+                                        <p>@Html.Raw(item.Story.Substring(0, 300))</p>
+                                    }
+                                }
+                                <p class="text-center mt-7">
+                                    <a class="btn btn-primary btn-round" href="@Url.Action("PetAdvertDetails", "PetAdvert", new { advertId=item.PetAdvertId })">DAHA FAZLA...</a>
+                                </p>
+                            </div>
+                        </article>
+                        <hr>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</main><!-- /.main-content -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function () {
+        console.log("ready!");
+        $(".container-sm").css("width", "auto");
+
+    });
+</script>

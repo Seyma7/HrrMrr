@@ -13,5 +13,12 @@ namespace HrrMrr.Entities
         public int ImageId { get; set; }
 
         public string ImageName { get; set; }
+
+        [Required]
+        public int PetAdvertId{ get; set; }
+
+        [Required]
+        [ForeignKey("PetAdvertId")]
+        public virtual PetAdverts PetAdvert { get; set; }
     }
 }

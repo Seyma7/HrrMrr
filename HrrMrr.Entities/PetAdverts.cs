@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
@@ -12,16 +13,22 @@ namespace HrrMrr.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PetAdvertId { get; set; }
 
+        [DisplayName("Adı")]
         public string Name { get; set; }
 
+        [DisplayName("Kaç Aylık ?")]
         public int Month { get; set; }
 
+        [DisplayName("Kaç Kilo ?")]
         public int Weight { get; set; }
 
         [Required(ErrorMessage ="Açıklama alanı boş geçilemez.")]
+        [DisplayName("Açıklama")]
         public string Description { get; set; }
 
+
         [Required(ErrorMessage = "Hikaye alanı boş geçilemez.Lütfen ilanınızı detaylandırınız.")]
+        [DisplayName("Hikayesi")]
         public string Story { get; set; }
 
         public DateTime Date { get; set; }
@@ -29,12 +36,7 @@ namespace HrrMrr.Entities
 
 
         [Required]
-        public int GenderId { get; set; }
-
-        [Required]
-        [ForeignKey("GenderId")]
-        public virtual Genders Gender { get; set; }
-
+        public string Gender { get; set; }
 
 
         [Required]
@@ -49,6 +51,7 @@ namespace HrrMrr.Entities
 
 
         [Required]
+        [DisplayName("Adresi")]
         public string Location { get; set; }
 
 
@@ -61,7 +64,12 @@ namespace HrrMrr.Entities
 
 
 
-        public virtual List<Images> Images { get; set; }
+        [Required]
+        public int ImageId { get; set; }
+
+        [Required]
+        [ForeignKey("ImageId")]
+        public virtual Images Image { get; set; }
 
     }
 }

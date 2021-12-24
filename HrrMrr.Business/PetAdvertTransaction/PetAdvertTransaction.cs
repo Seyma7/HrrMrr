@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utilities.BusinessResult;
 
 namespace HrrMrr.Business.PetAdvertTransaction
 {
@@ -17,5 +18,49 @@ namespace HrrMrr.Business.PetAdvertTransaction
             return manager.GetPetAdvertList();
         }
 
+        public DataResult<object> AddPetAdvert(PetAdverts model)
+        {
+            var result = new DataResult<object>();
+
+            if (model.Description == null)
+            {
+                result.Message.Add("Açıklama alanı zorunludur.");
+                result.Message.Add("danger");
+                return result;
+            }
+            if (model.Story == null)
+            {
+                result.Message.Add("Hikaye alanı zorunludur.");
+                result.Message.Add("danger");
+                return result;
+            }
+            if (model.Gender == null)
+            {
+                result.Message.Add("Cinsiyet alanı zorunludur.");
+                result.Message.Add("danger");
+                return result;
+            }
+            if (model.Location == null)
+            {
+                result.Message.Add("Adres alanı zorunludur.");
+                result.Message.Add("danger");
+                return result;
+            }
+            if (model.Image == null)
+            {
+                result.Message.Add("Görsel alanı zorunludur.");
+                result.Message.Add("danger");
+                return result;
+            }
+            if (model.PetType == null)
+            {
+                result.Message.Add("Evcil hayvanın türü alanı zorunludur.");
+                result.Message.Add("danger");
+                return result;
+            }
+            manager.AddPetAdvert(model);
+            result.IsSuccess = true;
+            return result;
+        }
     }
 }
