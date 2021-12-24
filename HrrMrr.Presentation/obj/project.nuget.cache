@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ah/B95V6zH8ZZvCOv1nvy/MGOxvqhJHLEII0RDpvuWU6XwoYl1zPjEHi8g9obipNsEWOGRvQJ2xEcSl9V7ig8w==",
+  "dgSpecHash": "dzE31bEk1iUeprgcwwcdgdxwGn9N0AolAiBBNn9+YvYtycrLPTq7jFMZ6Zk9pmx/p5nyXTuu8CfswctVHifF+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\seymagol\\Desktop\\HrrMrr\\HrrMrr.Presentation\\HrrMrr.Presentation.csproj",
   "expectedPackageFiles": [
@@ -22,7 +22,7 @@
     "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.0\\microsoft.aspnetcore.http.2.2.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
-    "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.2\\microsoft.aspnetcore.http.features.5.0.2.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.4\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.4.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\5.0.4\\microsoft.aspnetcore.identity.ui.5.0.4.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.5\\microsoft.aspnetcore.metadata.5.0.5.nupkg.sha512",
@@ -122,6 +122,7 @@
     "C:\\Users\\seymagol\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\seymagol\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

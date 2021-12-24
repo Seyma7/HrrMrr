@@ -36,7 +36,7 @@ namespace HrrMrr.DataAccess.Manager
                 if (model.Image != null)
                 {
                         Images deneme = new Images();
-                        deneme.ImageName = model.Image.ImageName;
+                        deneme.ImageFile = model.Image.ImageFile;
                         deneme.PetAdvertId = lastId;
                         db.Images.Add(deneme);
                         db.SaveChanges();

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yUSBrPo8s/FBjKyj7l5+c3ou9PMWOh63hEZn+EoASEQgrqAumyV/wOseGCAkM5L6nD7Qd91X86ADhLee/HMBSA==",
+  "dgSpecHash": "k13zcmdyzGUVAYwg3LEylXLUhFsw6R9bthhl6mcJB7qJQSCS2aJfYfE7+QK6mepbDQQz65lsp0ObcYRiNW+9Og==",
   "success": true,
   "projectFilePath": "C:\\Users\\seymagol\\Desktop\\HrrMrr\\HrrMrr.DataAccess\\HrrMrr.DataAccess.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.2\\microsoft.aspnetcore.http.features.5.0.2.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
@@ -55,6 +56,7 @@
     "C:\\Users\\seymagol\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\seymagol\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\seymagol\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",

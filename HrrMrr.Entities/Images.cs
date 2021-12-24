@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
@@ -12,7 +14,9 @@ namespace HrrMrr.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ImageId { get; set; }
 
-        public string ImageName { get; set; }
+        [NotMapped]
+        [DisplayName("Görsel Yükle")]
+        public IFormFile ImageFile { get; set; }
 
         [Required]
         public int PetAdvertId{ get; set; }
