@@ -44,5 +44,7 @@ namespace HrrMrr.Entities
         [Required]
         public string Location { get; set; }
 
+        public virtual List<PetAdverts> PetAdverts { get; set; }
+
     }
 }

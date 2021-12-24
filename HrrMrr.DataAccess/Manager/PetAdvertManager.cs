@@ -1,4 +1,5 @@
 ﻿using HrrMrr.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,24 +20,22 @@ namespace HrrMrr.DataAccess.Manager
         }
 
      
-        public void AddPetAdvert(PetAdverts model)
+        public void AddPetAdvert(PetAdverts model,IFormFile imageFile)
         {
             using (var db = new DatabaseContext())
             {
                 model.Date = DateTime.Now;
-
                 var user = db.Users.Where(x => x.UserId == model.UserId).FirstOrDefault();
                 model.User = user;
-                
+
                 db.PetAdverts.Add(model);
                 db.SaveChanges();
 
                 int lastId = db.PetAdverts.Max(x => x.PetAdvertId);
-
-                if (model.Image != null)
+                if (imageFile != null)
                 {
                         Images deneme = new Images();
-                        deneme.ImageFile = model.Image.ImageFile;
+                        deneme.ImageFile =imageFile;
                         deneme.PetAdvertId = lastId;
                         db.Images.Add(deneme);
                         db.SaveChanges();

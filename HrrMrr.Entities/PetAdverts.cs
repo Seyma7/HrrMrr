@@ -71,5 +71,7 @@ namespace HrrMrr.Entities
         [ForeignKey("ImageId")]
         public virtual Images Image { get; set; }
 
+        public virtual List<Comments> Comments { get; set; }
+
     }
 }

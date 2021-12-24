@@ -1,6 +1,7 @@
 ﻿using HrrMrr.Business.PetAdvertTransaction;
 using HrrMrr.Business.PetTypeTransaction;
 using HrrMrr.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -36,10 +37,13 @@ namespace HrrMrr.Presentation.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult AddPetAdvert(PetAdverts model)
+        public ActionResult AddPetAdvert(PetAdverts model, IFormFile ImageFile,int PetTypeId)
         {
             model.UserId = Convert.ToInt32(Request.Cookies["kullaniciId"]);
-            var deneme = transaction.AddPetAdvert(model);
+            PetTypeId = model.PetTypeId;
+            ImageFile = model.Image.ImageFile;
+            model.PetAdvertId = 1;
+            var deneme = transaction.AddPetAdvert(model, ImageFile,PetTypeId);
             if (deneme.IsSuccess == true)
             {
                 return RedirectToAction("MyPetAdverts");

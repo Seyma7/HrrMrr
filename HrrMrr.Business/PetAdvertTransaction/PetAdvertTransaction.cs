@@ -1,5 +1,6 @@
 ﻿using HrrMrr.DataAccess.Manager;
 using HrrMrr.Entities;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace HrrMrr.Business.PetAdvertTransaction
             return manager.GetPetAdvertList();
         }
 
-        public DataResult<object> AddPetAdvert(PetAdverts model)
+        public DataResult<object> AddPetAdvert(PetAdverts model, IFormFile imageFile, int PetTypeId)
         {
             var result = new DataResult<object>();
 
@@ -52,13 +53,13 @@ namespace HrrMrr.Business.PetAdvertTransaction
                 result.Message.Add("danger");
                 return result;
             }
-            if (model.PetType == null)
+            if (PetTypeId == 0)
             {
                 result.Message.Add("Evcil hayvanın türü alanı zorunludur.");
                 result.Message.Add("danger");
                 return result;
             }
-            manager.AddPetAdvert(model);
+            manager.AddPetAdvert(model,imageFile);
             result.IsSuccess = true;
             return result;
         }
