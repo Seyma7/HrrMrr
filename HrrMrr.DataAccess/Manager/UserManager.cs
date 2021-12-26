@@ -76,5 +76,14 @@ namespace HrrMrr.DataAccess.Manager
                 return user;
             }
         }
+
+        public Users GetAccount(int userid)
+        {
+            using (var db = new DatabaseContext())
+            {
+                var user = db.Users.Where(x => x.UserId == userid).FirstOrDefault();
+                return user;
+            }
+        }
     }
 }

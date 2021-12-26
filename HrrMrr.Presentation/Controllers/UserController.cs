@@ -112,5 +112,12 @@ namespace HrrMrr.Presentation.Controllers
 
             return View(transaction.MyAccount(userid));
         }
+
+
+        [HttpGet]
+        public IActionResult GetAccount(int id)
+        {
+            return View(transaction.GetAccount(id));
+        }
     }
 }

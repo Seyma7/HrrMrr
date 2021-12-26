@@ -197,3 +197,4 @@ C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\HrrMrr.Pre
 C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\HrrMrr.Presentation.Resources.Views.Shared._Layout.tr.resources
 C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\HrrMrr.Presentation.Resources.Views.Shared._LayoutAfterLoginUser.en.resources
 C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\HrrMrr.Presentation.Resources.Views.Shared._LayoutAfterLoginUser.tr.resources
+C:\Users\seymagol\Desktop\HrrMrr\HrrMrr.Presentation\obj\Debug\net5.0\Razor\Views\User\GetAccount.cshtml.g.cs

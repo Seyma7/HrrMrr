@@ -77,13 +77,9 @@
                 @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.User.Name)
+                <a href="@Url.Action("GetAccount","User",new {id=item.UserId})">@item.User.Name</a>
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PetAdvertId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PetAdvertId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PetAdvertId">Delete</a>
-            </td>
+            
         </tr>
 }
     </tbody>
