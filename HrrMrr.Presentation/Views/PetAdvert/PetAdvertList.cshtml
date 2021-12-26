@@ -2,7 +2,24 @@
 
 @{
     ViewData["Title"] = "İlanlar";
-    Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+
+    if (ViewBag.kullaniciGiris != null)
+    {
+        if (ViewBag.roleId == "2")
+        {
+            Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+        }
+
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
 }
 
 <table class="table">

@@ -1,0 +1,159 @@
+﻿@model IEnumerable<HrrMrr.Entities.PetTypes>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <!--AddType-->
+    @using (Html.BeginForm("AddType", "PetType", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <br /><br /><br />
+        <div>
+            <p align="right" style="text-align: center;">
+                <!-- Button trigger modal -->
+                <button style="background-color:cadetblue;height:70px;width:150px" type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                    YENİ TÜR
+                </button>
+            </p>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"> YENİ TÜR ADI </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" name="TypeName" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">İPTAL</button>
+                        <button type="submit" class="btn btn-secondary" style="background-color: cadetblue">EKLE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <br />
+    <div class="card">
+        <div class="card-header">
+            @using (Html.BeginForm("Search", "PetType", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded" name="searchString" placeholder="Ara" aria-label="Search"
+                           aria-describedby="search-addon" />
+                    @*<span class="input-group-text border-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                    </span>*@
+                </div>
+            }
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tür Adları</th>
+                        <th>Düzenle</th>
+                        <th style="width: 40px">Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.TypeName</td>
+                            <td>
+                                @using (Html.BeginForm("EditType", "PetType", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <input type="hidden" name="_model.PetTypeId" value="@item.PetTypeId" />
+                                    <div>
+
+                                        <p align="left">
+                                            @*Button trigger modal*@
+                                            <button style="background-color: cadetblue;color:white;height: 30px;width: 100px" type="button" class="btn btn-success" data-toggle="modal" data-target='@("#exampleModalForUpdate"+item.PetTypeId.ToString())'>
+                                                Düzenle
+                                            </button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id='@("exampleModalForUpdate"+item.PetTypeId.ToString())' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel1"> LÜTFEN TÜR ADINI DEĞİŞTİRİNİZ !</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                @Html.DisplayFor(x => item.TypeName)
+                                                                <input type="text" class="form-control" name="_model.TypeName" value="@item.TypeName" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">İPTAL</button>
+                                                            <button type="submit" class="btn btn-secondary" style="background-color:cadetblue">DÜZENLE</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </p>
+                                    </div>
+                                }
+                            </td>
+                            <td>
+                                @using (Html.BeginForm("DeleteType", "PetType", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                {
+                                    @Html.HiddenFor(x => item.PetTypeId)
+
+                                    <p align="right" style="margin-top:10px;margin-bottom:10px;">
+                                        <!-- Button trigger modal -->
+                                        <button style="height: 30px; width:50px;background:crimson;color:white;  border: 1px solid darkred;" type="button" data-toggle="modal" data-target='@("#exampleModalForDelete" + item.PetTypeId.ToString())'>
+                                            Sil
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id='@("exampleModalForDelete" + item.PetTypeId.ToString())' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel3"> SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ? </h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        @item.TypeName
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">İPTAL</button>
+                                                        @Html.ActionLink("SİL", "DeleteType", "PetType", new { id = item.PetTypeId }, new { @class = "btn btn-danger btn-m" })
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </p>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+
+</div>
+<br />
+<br />
+<br />
+<br />

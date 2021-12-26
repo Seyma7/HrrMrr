@@ -16,7 +16,12 @@ namespace HrrMrr.Presentation.Controllers
 
             }
             else
+            {
                 ViewBag.kullaniciGiris = Request.Cookies["kullaniciAdi"];
+                ViewBag.roleId = Request.Cookies["roleId"];
+            }
+                
+                
             return View();
         }
     }

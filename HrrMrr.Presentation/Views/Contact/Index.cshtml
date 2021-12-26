@@ -1,9 +1,17 @@
 ﻿
 @{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "İletişim";
     if (ViewBag.kullaniciGiris != null)
     {
-        Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+        if (ViewBag.roleId == 2.ToString())
+        {
+            Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+        }
+
     }
     else
     {
@@ -14,9 +22,7 @@
 
 <!-- Main Content -->
 <main class="main-content">
-    <section class="section text-white pb-9" style="background-color: #000;
-        background-image: url(../../wwwroot/images/bebek.jpeg);">
-
+    <section class="section text-white pb-9" style="background-color: #000;">
 
         <div class="overlay opacity-45" style="background-color: #000;"></div>
 

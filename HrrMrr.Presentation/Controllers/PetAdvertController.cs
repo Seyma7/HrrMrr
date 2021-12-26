@@ -26,6 +26,15 @@ namespace HrrMrr.Presentation.Controllers
         //PetAdverts listeleme
         public IActionResult PetAdvertList()
         {
+            if (Request.Cookies["kullaniciId"] == null)
+            {
+                ViewBag.kullaniciGiris = null;
+            }
+            else
+                ViewBag.kullaniciGiris = Request.Cookies["kullaniciId"];
+
+            ViewBag.roleId = Request.Cookies["roleId"];
+
             var temp = transaction.GetPetAdvertList();
             return View(temp);
         }
@@ -40,6 +49,9 @@ namespace HrrMrr.Presentation.Controllers
             }
             else
                 ViewBag.kullaniciGiris = Request.Cookies["kullaniciId"];
+
+            ViewBag.roleId = Request.Cookies["roleId"];
+
             int userId= Convert.ToInt32(Request.Cookies["kullaniciId"]);
             var temp = transaction.GetMyPetAdvertList(userId);
             return View(temp);
@@ -56,6 +68,9 @@ namespace HrrMrr.Presentation.Controllers
             }
             else
                 ViewBag.kullaniciGiris = Request.Cookies["kullaniciAdi"];
+
+            ViewBag.roleId = Request.Cookies["roleId"];
+
             var types=petTypeTransaction.GetPetTypeList();
             ViewBag.petTypes = types;
             return View();
@@ -78,6 +93,7 @@ namespace HrrMrr.Presentation.Controllers
             using (var filestream=new FileStream(path,FileMode.Create))
             {
                 await model.ImageFile.CopyToAsync(filestream);
+                
             }
             
             var deneme = transaction.AddPetAdvert(model,PetTypeId);
@@ -97,6 +113,8 @@ namespace HrrMrr.Presentation.Controllers
         [HttpGet]
         public ActionResult PetAdvertDetails(int id)
         {
+            ViewBag.roleId = Request.Cookies["roleId"];
+
             return View(transaction.PetAdvertDetails(id));
         }
 

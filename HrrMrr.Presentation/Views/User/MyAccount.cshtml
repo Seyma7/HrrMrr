@@ -1,8 +1,24 @@
 ﻿@model HrrMrr.Entities.Users
 
 @{
-    ViewBag.title = "Hesabım";
-    Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+    if (ViewBag.kullaniciId != null)
+    {
+        if (ViewBag.roleId == "3")
+        {
+            Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+        }
+
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
 }
 
     <main class="main-content">

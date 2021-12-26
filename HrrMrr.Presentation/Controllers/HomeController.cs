@@ -33,6 +33,9 @@ namespace HrrMrr.Presentation.Controllers
             else
                 ViewBag.kullaniciGiris = Request.Cookies["kullaniciAdi"];
 
+            ViewBag.kullaniciId = Request.Cookies["kullaniciId"];
+            ViewBag.roleId = Request.Cookies["roleId"];
+
             return View();
         }
 

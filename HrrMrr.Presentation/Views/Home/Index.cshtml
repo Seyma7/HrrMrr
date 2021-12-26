@@ -1,15 +1,23 @@
 ﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     ViewData["Title"] = "HrrMrr | Anasayfa";
+
     if (ViewBag.kullaniciGiris != null)
     {
-        Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+        if (ViewBag.roleId == "2")
+        {
+            Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+        }
+
     }
     else
     {
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
-
 }
 
 <!-- Main content -->

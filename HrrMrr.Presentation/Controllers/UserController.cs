@@ -103,13 +103,11 @@ namespace HrrMrr.Presentation.Controllers
         [HttpGet]
         public IActionResult MyAccount(int userid)
         {
-            ViewBag.kullaniciGiris = null;
+             userid = Convert.ToInt32(Request.Cookies["kullaniciId"]);
 
-            if (Request.Cookies["kullaniciId"] != null)
-            {
-                userid = Convert.ToInt32(Request.Cookies["kullaniciId"]);
-            }
-
+             ViewBag.kullaniciId = Request.Cookies["kullaniciId"];
+             ViewBag.roleId = Request.Cookies["roleId"];
+            
             return View(transaction.MyAccount(userid));
         }
 
@@ -117,6 +115,8 @@ namespace HrrMrr.Presentation.Controllers
         [HttpGet]
         public IActionResult GetAccount(int id)
         {
+            ViewBag.kullaniciId = Request.Cookies["kullaniciId"];
+            ViewBag.roleId = Request.Cookies["roleId"];
             return View(transaction.GetAccount(id));
         }
     }

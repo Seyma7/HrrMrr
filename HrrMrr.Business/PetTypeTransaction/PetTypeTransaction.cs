@@ -15,5 +15,25 @@ namespace HrrMrr.Business.PetTypeTransaction
         {
             return manager.GetPetTypeList();
         }
+
+        public void EditType(PetTypes _model)
+        {
+            manager.EditType(_model);
+        }
+
+        public void DeleteType(int? id)
+        {
+            manager.DeleteType(id);
+        }
+
+        public void AddType(PetTypes _model)
+        {
+            manager.AddType(_model);
+        }
+
+        public List<PetTypes> Search(string searchString)
+        {
+            return manager.Search(searchString);
+        }
     }
 }
