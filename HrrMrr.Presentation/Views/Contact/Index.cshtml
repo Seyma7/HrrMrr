@@ -1,8 +1,41 @@
 ﻿
 @{
     ViewData["Title"] = "Contact";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    if (ViewBag.kullaniciGiris != null)
+    {
+        Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
 }
 
-<h1>Index</h1>
+<!-- Main Content -->
+<main class="main-content">
+    <section class="section text-white pb-9" style="background-color: #000;
+        background-image: url(../../wwwroot/images/bebek.jpeg);">
 
+
+        <div class="overlay opacity-45" style="background-color: #000;"></div>
+
+        <div class="container">
+
+            <h2 class="text-center">Bize Ulaşın<br></h2>
+            <div class="row gap-y mt-8">
+
+                <div class="col-lg-5 text-center text-lg-left mx-auto">
+                    <hr class="d-lg-none">
+                    <strong>Adres </strong>Bilgisayar ve Bilişim Bilimleri Fakültesi Haşim Gürdamar Binası 54187 Serdivan / SAKARYA</p>
+                    <p><strong>Telefon </strong>Tel: +90 (264) 295 69 79 Fax: +90 (264) 295 69 78 </p>
+                    <p><strong>Eposta </strong>bf@sakarya.edu.tr</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <iframe style="display: block;width:100% ;height:400px" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBlZ1usruh8BsWAMF-HxF-BEy0ImhykWE8&amp;q=Altunizade+Mh,+Kısıklı+Cd.+14%2F3,+34662+Üsküdar%2Fİstanbul"></iframe>
+    <br /><br />
+</main><!-- /.main-content -->

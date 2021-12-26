@@ -1,0 +1,63 @@
+﻿@model HrrMrr.Entities.PetAdverts
+
+@{
+    ViewData["Title"] = "Detay";
+    Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+}
+<main class="main-content">
+
+    <div class="container h-100">
+
+        <div class="card-body box-profile">
+            <ul class="list-group list-group-unbordered mb-3">
+                <li>
+                    <p class="profile-user-img text-center">
+                        @Model.ImageFile=@("~/image/"+ Model.PetAdvertId.ToString())
+                        @if (Model.ImageFile != null)
+                        {
+                            <img src="@Model.ImageFile" style="max-height:250px;align-content:center" />
+                        }
+                    </p>
+                </li>
+
+                <li class="list-group-item">
+                    <b>Adı</b> <a class="float-right"><input type="text" name="@Model.Name" placeholder="@Model.Name" id="@Model.Name" value="@Model.Name" /></a>
+                </li>
+                <li class="list-group-item">
+                    <b>Türü</b> <a class="float-right"><input type="text" name="@Model.PetType.TypeName" placeholder="@Model.PetType.TypeName" id="@Model.PetType.TypeName" value="@Model.PetType.TypeName" /></a>
+                </li>
+                <li class="list-group-item">
+                    <b>Cinsiyeti</b> <a class="float-right"><input type="text" name="@Model.Gender" placeholder="@Model.Gender" id="@Model.Gender" value="@Model.Gender" /></a>
+                </li>
+                <li class="list-group-item">
+                    <b>Kaç Aylık</b> <a class="float-right"><input type="text" name="@Model.Month" placeholder="@@Model.Month" id="@Model.Month" value="@Model.Month" /></a>
+                </li>
+                <li class="list-group-item">
+                    <b>Kilosu</b> <a class="float-right"><input type="text" name="@Model.Weight" placeholder="@Model.Weight" id="@Model.Weight" value="@Model.Weight" /></a>
+                </li>
+                <li class="list-group-item">
+                    <b>Açıklama</b> <a class="float-right"><input type="text" name="@Model.Description" placeholder="@Model.Description" id="@Model.Description" value="@Model.Description" /></a>
+                </li>
+                <li class="list-group-item">
+                    <b>Hikayesi</b> <a class="float-right"><input type="text" name="@Model.Story" placeholder="@Model.Story" id="@Model.Story" value="@Model.Story" /></a>
+                </li>
+                <li class="list-group-item">
+                    <b>Lokasyonu</b> <a class="float-right"><input type="text" name="@Model.Location" placeholder="@Model.Location" id="@Model.Location" value="@Model.Location" /></a>
+                </li>
+                <li class="list-group-item">
+                    <b>İlan Sahibi</b> <a class="float-right"><input type="text" name="@Model.User.Name" placeholder="@Model.User.Name" id="@Model.User.Name" value="@Model.User.Name" /></a>
+                </li>
+                <li class="list-group-item">
+                    <b>İlan Tarihi</b> <a class="float-right"><input type="text" name="@Model.Date" placeholder="@Model.Date" id="@Model.Date" value="@Model.Date" /></a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    <br /><br /><br />
+</main>
+
+@*<div>
+    <a asp-action="Edit" asp-route-id="@Model.PetAdvertId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>*@

@@ -40,9 +40,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Resources\Views\Home\" />
+    <Folder Include="Resources\Views\User\" />
+    <Folder Include="Resources\Views\Shared\" />
+    <Folder Include="Resources\Views\PetAdvert\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="wwwroot\images\" />
-    <Folder Include="Resources\Views\" />
+    <Folder Include="wwwroot\image\" />
   </ItemGroup>
 
 </Project>

@@ -9,8 +9,6 @@ namespace HrrMrr.DataAccess
         public DbSet<Users> Users { get; set; }
         public DbSet<PetTypes> PetTypes { get; set; }
         public DbSet<PetAdverts> PetAdverts { get; set; }
-        public DbSet<Comments> Comments { get; set; }
-        public DbSet<Images> Images { get; set; }
         public DbSet<Roles> Roles { get; set; }
         
 

@@ -19,7 +19,12 @@ namespace HrrMrr.Business.PetAdvertTransaction
             return manager.GetPetAdvertList();
         }
 
-        public DataResult<object> AddPetAdvert(PetAdverts model, IFormFile imageFile, int PetTypeId)
+        public List<PetAdverts> GetMyPetAdvertList(int userId)
+        {
+            return manager.GetMyPetAdvertList(userId);
+        }
+
+        public DataResult<object> AddPetAdvert(PetAdverts model, int PetTypeId)
         {
             var result = new DataResult<object>();
 
@@ -47,7 +52,7 @@ namespace HrrMrr.Business.PetAdvertTransaction
                 result.Message.Add("danger");
                 return result;
             }
-            if (model.Image == null)
+            if (model.ImageFile == null)
             {
                 result.Message.Add("Görsel alanı zorunludur.");
                 result.Message.Add("danger");
@@ -59,9 +64,19 @@ namespace HrrMrr.Business.PetAdvertTransaction
                 result.Message.Add("danger");
                 return result;
             }
-            manager.AddPetAdvert(model,imageFile);
+            manager.AddPetAdvert(model);
             result.IsSuccess = true;
             return result;
+        }
+
+        public int GetLastId()
+        {
+            return manager.GetLastId();
+        }
+
+        public PetAdverts PetAdvertDetails(int id)
+        {
+            return manager.PetAdvertDetails(id);
         }
     }
 }

@@ -315,6 +315,14 @@
         "runtime": {
           "HrrMrr.Presentation.dll": {}
         },
+        "resources": {
+          "en/HrrMrr.Presentation.resources.dll": {
+            "locale": "en"
+          },
+          "tr/HrrMrr.Presentation.resources.dll": {
+            "locale": "tr"
+          }
+        },
         "compile": {
           "HrrMrr.Presentation.dll": {}
         }

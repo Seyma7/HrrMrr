@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -63,15 +64,9 @@ namespace HrrMrr.Entities
         public virtual Users User { get; set; }
 
 
-
-        [Required]
-        public int ImageId { get; set; }
-
-        [Required]
-        [ForeignKey("ImageId")]
-        public virtual Images Image { get; set; }
-
-        public virtual List<Comments> Comments { get; set; }
+        [NotMapped]
+        [DisplayName("Görsel Yükle")]
+        public IFormFile ImageFile { get; set; }
 
     }
 }

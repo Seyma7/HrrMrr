@@ -1,0 +1,89 @@
+﻿@model IEnumerable<HrrMrr.Entities.PetAdverts>
+
+@{
+    ViewData["Title"] = "İlanlar";
+    Layout = "~/Views/Shared/_LayoutAfterLoginUser.cshtml";
+}
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Fotoğrafı
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Month)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Weight)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Date)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Gender)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PetType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Location)
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @*<img src="~/image/@item.ImageFile"
+                                    class="rounded-circle"
+                                    height="40" width="40"
+                                    asp-append-version="true" />*@
+
+
+
+                                @item.ImageFile=@("~/image/"+item.PetAdvertId.ToString())
+                                @if (@item.ImageFile != null)
+                                {
+                                    <img src="@item.ImageFile" style="max-height:50px" />
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Month)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Weight)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Gender)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PetType.TypeName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Location)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.PetAdvertId">Edit</a> |
+                                <a class="btn btn-primary btn-round" href="@Url.Action("PetAdvertDetails","PetAdvert", new {id=@item.PetAdvertId})">DAHA FAZLA...</a>
+                                @*<a asp-action="@Url.Action("PetAdvertDetails","PetAdvert")" asp-route-id="@item.PetAdvertId">Detay</a> |*@
+                                <a asp-action="Delete" asp-route-id="@item.PetAdvertId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+            <br />
+            <br />
