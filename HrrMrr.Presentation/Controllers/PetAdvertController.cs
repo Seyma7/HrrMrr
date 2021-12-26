@@ -84,7 +84,7 @@ namespace HrrMrr.Presentation.Controllers
            
             if (deneme.IsSuccess == true)
             {
-                return RedirectToAction("MyPetAdverts");
+                return RedirectToAction("MyPetAdvertList");
             }
             else
             {
@@ -98,6 +98,27 @@ namespace HrrMrr.Presentation.Controllers
         public ActionResult PetAdvertDetails(int id)
         {
             return View(transaction.PetAdvertDetails(id));
+        }
+
+        public IActionResult Search(string searchString)
+        {
+            var advertlist = transaction.Search(searchString);
+            return View("PetAdvertList", advertlist);
+        }
+
+
+
+        public ActionResult DeletePetAdvert(int? id)
+        {
+            if (id != null)
+            {
+                transaction.DeletePetAdvert(id);
+                return RedirectToAction("MyPetAdvertList");
+            }
+            else
+            {
+                return RedirectToAction("MyPetAdvertList");
+            }
         }
     }
 }

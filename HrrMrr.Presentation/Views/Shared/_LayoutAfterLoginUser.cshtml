@@ -1,4 +1,4 @@
-﻿
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,18 +31,18 @@
                     <!-- Left navbar links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href=@Url.Action("Index","Home") class="nav-link">Anasayfa</a>
+                            <a href=@Url.Action("Index","Home") class="nav-link">@localizer["String1"]</a>
                         </li>
                         <li class="nav-item">
-                            <a href="@Url.Action("Index","Contact")" class="nav-link">İletişim</a>
+                            <a href="@Url.Action("Index","Contact")" class="nav-link">@localizer["String2"]</a>
                         </li>
 
                     </ul>
-
                     <!-- SEARCH FORM -->
-                    <form class="form-inline ml-0 ml-md-3">
+                    <form class="form-inline ml-0 ml-md-3" asp-action="Search" asp-controller="PetAdvert" method="get">
                         <div class="input-group input-group-sm">
-                            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+
+                            <input class="form-control form-control-navbar" type="text" name="searchString" type="search" placeholder="Search" aria-label="Search" value="">
                             <div class="input-group-append">
                                 <button class="btn btn-navbar" type="submit">
                                     <i class="fas fa-search"></i>
@@ -55,18 +55,18 @@
                 <!-- Right navbar links -->
                 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
                     <li class="nav-item dropdown">
-                        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">İlanlar</a>
+                        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">@localizer["String3"]</a>
                         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                            <li><a href="@Url.Action("PetAdvertList","PetAdvert")" class="dropdown-item">İlanlar</a></li>
-                            <li><a href="@Url.Action("MyPetAdvertList","PetAdvert")" class="dropdown-item">İlanlarım</a></li>
-                            <li><a href="@Url.Action("AddPetAdvert","PetAdvert")" class="dropdown-item">İlan Aç</a></li>
+                            <li><a href="@Url.Action("PetAdvertList","PetAdvert")" class="dropdown-item">@localizer["String3"]</a></li>
+                            <li><a href="@Url.Action("MyPetAdvertList","PetAdvert")" class="dropdown-item">@localizer["String4"]</a></li>
+                            <li><a href="@Url.Action("AddPetAdvert","PetAdvert")" class="dropdown-item">@localizer["String5"]</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Hesap</a>
+                        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">@localizer["String6"]</a>
                         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                            <li><a href="@Url.Action("MyAccount","User")" class="dropdown-item">Hesabım </a></li>
-                            <li><a href="@Url.Action("Logout","User")" class="dropdown-item">Çıkış Yap</a></li>
+                            <li><a href="@Url.Action("MyAccount","User")" class="dropdown-item">@localizer["String7"] </a></li>
+                            <li><a href="@Url.Action("Logout","User")" class="dropdown-item">@localizer["String8"]</a></li>
                         </ul>
                     </li>
 
@@ -99,5 +99,7 @@
     <script src="../../dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
+
+
 </body>
 </html>

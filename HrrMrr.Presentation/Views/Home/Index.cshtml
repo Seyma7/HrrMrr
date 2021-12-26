@@ -1,4 +1,5 @@
-﻿@{
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
     ViewData["Title"] = "HrrMrr | Anasayfa";
     if (ViewBag.kullaniciGiris != null)
     {
@@ -13,13 +14,7 @@
 
 <!-- Main content -->
 <div class="content">
-    @*<section class="section text-white h-fullscreen text-center" style="background-image: url(../../wwwroot/images/kedi6.jpg);">
 
-            <div class="overlay opacity-70" style="background-color: #000;"></div>
-
-
-
-        </section>*@
     <section class="section text-white h-fullscreen text-center">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -55,16 +50,16 @@
     <div class="container">
 
         <div class="row">
-            HrrMrr evcil hayvanlar ile ilgili bilgi edinebileceğiniz bir bilgi merkezinin yanı sıra bir hayvan sahiplendirme platformudur. Renkli pati aracılığı ile edinmek istediğiniz evcil hayvanlar ile ilgili daha fazla bilgi edinebilir ve onları yakından tanıyabilirsiniz. Sahiplendirme platformumuz aracılığı ile sevimli bir dostumuza yeni yuva olabilir veya sokaklara düşmesini engelleyebilirsiniz. Soru cevap bölümü ile aklınızdan geçen tüm soruları sorabilir ve diğer üyelerimizden ve sitemizi takip eden veterinerler aracılığı ile aklınızdaki soruları giderebilirsiniz.
+            @localizer["String1"]
 
             <br /><br />
 
-            Biz tüm bu platformları bir arada toplayıp sizin ve evcil hayvanınızın en doğru şekilde sosyalleşmesi için çaba gösteren bir ekibiz. HrrMrr üzerinden hiç bir şekilde hayvan ticareti yapmamaktayız ve yapılmasına da müsaade etmemekteyiz. Barınaklarda ve sokaklarda bekleyen binlerce can yuva beklerken renkli pati olarak hayvan ticaretine tamamen karşıyız.
+            @localizer["String2"]
             <br /><br />
 
-            Sitemiz henüz geliştirme aşamasında olduğu için sürekli yeni özellikler ekliyor ve sitemizi daha kullanışlı hale getirmeye çalışıyoruz.
+            @localizer["String3"]
             <br /><br />
-            Aklınıza takılan daha fazla soru var ise istek ve önerilerinizi iletişim bölümünden bize gönderebilirsiniz. Size dönüş yapacağımızdan emin olabilirsiniz.
+            @localizer["String4"]
             <br /><br /><br /><br /><br /><br />
             <!--<div class="col-lg-6">
     <div class="card">

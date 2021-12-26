@@ -78,5 +78,16 @@ namespace HrrMrr.Business.PetAdvertTransaction
         {
             return manager.PetAdvertDetails(id);
         }
+
+        public List<PetAdverts> Search(string searchString)
+        {
+            return manager.Search(searchString);
+        }
+
+
+        public void DeletePetAdvert(int? id)
+        {
+            manager.DeletePetAdvert(id);
+        }
     }
 }

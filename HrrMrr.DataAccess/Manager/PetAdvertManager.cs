@@ -64,5 +64,39 @@ namespace HrrMrr.DataAccess.Manager
                 return Detail;
             }
         }
+
+
+        public List<PetAdverts> Search(string searchString)
+        {
+            using (var db = new DatabaseContext())
+            {
+                var adverts = db.PetAdverts.Where(x => x.PetType.TypeName.ToLower().Contains(searchString.ToLower())).
+                                                                    Include(x => x.PetType).Include(x => x.User)
+                                                                    .ToList();
+
+                var petAdvert = new List<PetAdverts>();
+
+                foreach (var item in adverts)
+                {
+                    var deneme = new PetAdverts();
+                    deneme = item;
+                    petAdvert.Add(deneme);
+                }
+
+                return petAdvert;
+            }
+        }
+
+
+        public void DeletePetAdvert(int? id)
+        {
+            using (var db = new DatabaseContext())
+            {
+                var advert = db.PetAdverts.Where(x => x.PetAdvertId == id).Include(x => x.PetType).FirstOrDefault();
+                
+                db.PetAdverts.Remove(advert);
+                db.SaveChanges();
+            }
+        }
     }
 }
